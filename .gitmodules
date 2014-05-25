@@ -1,0 +1,9 @@
+[submodule "vendor/php-mf2"]
+	path = vendor/php-mf2
+	url = https://github.com/indieweb/php-mf2.git
+[submodule "vendor/absolute-url-deriver"]
+	path = vendor/absolute-url-deriver
+	url = git@github.com:webignition/absolute-url-deriver.git
+[submodule "vendor/url"]
+	path = vendor/url
+	url = git@github.com:webignition/url.git
