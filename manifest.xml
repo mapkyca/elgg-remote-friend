@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
+	<name>Remote friends</name>
+	<author>Marcus Povey</author>
+	<version>0.1</version>
+	<category>enhancements</category>
+	<description>Provides remote user follow functionality via Microformats2 discovery, in a similar way to Known.</description>
+	<website>https://github.com/mapkyca/elgg-remote-friends</website>
+	<copyright>Marcus Povey 2014</copyright>
+	<license>GNU General Public License version 2</license>
+	<requires>
+		<type>elgg_release</type>
+		<version>1.8</version>
+	</requires>
+</plugin_manifest>
