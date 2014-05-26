@@ -25,6 +25,7 @@ $nickname =  $properties['nickname'][0];
 	<div class="elgg-body">
 	    <h3><?= $name; ?></h3>
 	    <div class="e-content entry-content">
+                <input type="hidden" name="profile_icon" value="<?= $photo; ?>" />
 		<?php
 		foreach ($urls as $url) {
 		    ?>
