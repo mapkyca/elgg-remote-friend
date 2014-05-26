@@ -30,7 +30,10 @@ if ($uuid = get_input('uuid')) {
 	    $new_user->language = get_current_language();
 	    
 	    $new_user->uuid = $uuid; // Finally, save their actual UUID
-	    
+            $new_user->website = $uuid;
+            
+            $new_user->profile_icon = get_input('profile_icon');
+            
 	    if (!$new_user->save())
 		register_error("There was a problem saving the new remote user.");
 	}
