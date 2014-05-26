@@ -40,15 +40,21 @@ function get_user_by_profile_UUID($url) {
     
     // Try and user by profile if local
     if (is_local_uuid($url)) {
+	error_log("*** User $url is local, seeing if we can find them");
 	
 	if (preg_match("/".str_replace('/','\/', $CONFIG->wwwroot)."profile\/([0-9a-zA-Z]+)\/?/", $url, $match))
 		$username = $match[1];
+	
+	error_log("*** Looking for $username");
 	
 	$user = get_user_by_username($username);
     }
     
     // otherwise see if the profile ID has been attached to a user
     if (!$user) {
+	
+	error_log("*** No user, seeing if they're a remote user");
+	
 	if ($entities = elgg_get_entities_from_metadata([
 	    'type' => 'user',
 	    'metadata_name_value_pairs' => ['name' => 'uuid', 'value' => $url]
