@@ -26,6 +26,17 @@ elgg_register_event_handler('init', 'system', function() {
     // Register CSS
     elgg_register_css('remotefriends.css', elgg_get_simplecache_url('css', 'remotefriends'));
 
+    // Override profile icon
+    elgg_register_plugin_hook_handler('entity:icon:url', 'user', function($hook, $entity_type, $return_value, $params) {
+
+	$user = $params['entity'];
+	$size = $params['size'];
+	
+	if (elgg_instanceof($user, 'user', 'remote_user')) {
+            return $user->profile_icon;
+	}
+    }, 1);
+    
     // Register bookmark page handler
     elgg_register_page_handler('remotefriends', function($page) {
 
