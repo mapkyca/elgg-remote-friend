@@ -35,7 +35,7 @@ elgg_register_event_handler('init', 'system', function() {
 	    elgg_load_css('remotefriends.css');
 
 	    switch ($page[0]) {
-
+		
 		// Find available friends
 		case 'findfriends' :
 
